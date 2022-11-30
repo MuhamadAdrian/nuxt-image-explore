@@ -65,6 +65,8 @@ const highlightedPost = ref([
           >
             <img
               class="rounded-md w-full object-center"
+              width="400"
+              height="400"
               :src="`/images/${post.image}`"
               :alt="post.title"
             />
