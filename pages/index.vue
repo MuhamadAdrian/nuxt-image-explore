@@ -13,7 +13,7 @@ const tags = ref([
 const highlightedPost = ref([
   {
     id: 1,
-    image: "",
+    image: "blog-1.jpg",
     title: "Blog Title 1",
     description: `dolor sit amet consectetur adipisicing elit. Animi unde maiores
           repellat dignissimos doloremque, rem sint quibusdam corporis, quae
@@ -22,7 +22,7 @@ const highlightedPost = ref([
   },
   {
     id: 2,
-    image: "",
+    image: "blog 2.jpg",
     title: "Blog Title 2",
     description: `dolor sit amet consectetur adipisicing elit. Animi unde maiores
           repellat dignissimos doloremque, rem sint quibusdam corporis, quae
@@ -31,7 +31,7 @@ const highlightedPost = ref([
   },
   {
     id: 3,
-    image: "",
+    image: "blog 3.jpg",
     title: "Blog Title 3",
     description: `dolor sit amet consectetur adipisicing elit. Animi unde maiores
           repellat dignissimos doloremque, rem sint quibusdam corporis, quae
@@ -63,7 +63,13 @@ const highlightedPost = ref([
             :key="post.id"
             class="bg-gray-800 p-4 rounded-md"
           >
-            <img :src="post.image" :alt="post.title" />
+            <img
+              class="rounded-md"
+              width="400"
+              height="200"
+              :src="`/images/${post.image}`"
+              :alt="post.title"
+            />
             <h2 class="font-semibold text-lg mt-3">{{ post.title }}</h2>
             <p class="mt-5 truncate block">
               {{ post.description }}
