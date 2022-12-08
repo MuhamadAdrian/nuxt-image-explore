@@ -57,19 +57,25 @@ const highlightedPost = ref([
             #{{ tag }}
           </div>
         </div>
-        <div class="grid grid-cols-3 gap-4 mt-10">
+        <div class="grid md:grid-cols-3 grid-cols-1 gap-4 mt-10">
           <div
             v-for="post in highlightedPost"
             :key="post.id"
             class="bg-gray-800 p-4 rounded-md"
           >
-            <img
+            <nuxt-picture
+              :src="`/images/${post.image}`"
+              width="4501"
+              height="2501"
+              :alt="post.title"
+            />
+            <!-- <img
               class="rounded-md w-full object-center"
               width="400"
               height="400"
               :src="`/images/${post.image}`"
               :alt="post.title"
-            />
+            /> -->
             <h2 class="font-semibold text-lg mt-3">{{ post.title }}</h2>
             <p class="mt-5 truncate block">
               {{ post.description }}

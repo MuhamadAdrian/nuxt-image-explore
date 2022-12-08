@@ -8,6 +8,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxt/image-edge": "1.0.0-27840416.dc1ed65",
     "@nuxt/postcss8": "^1.1.3",
     "@nuxtjs/tailwindcss": "^6.1.3",
     "autoprefixer": "^10.4.13",
